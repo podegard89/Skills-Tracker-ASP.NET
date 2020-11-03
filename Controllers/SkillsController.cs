@@ -41,7 +41,7 @@ namespace SkillsTracker.Controllers
                     "<option>Making Apps</option>" +
                 "</select>" +
                 "<h2>C#, ASP.NET</h2>" +
-                "<select name='asp'>" +
+                "<select name='aspNET'>" +
                     "<option>Not Started</option>" +
                     "<option>Learning Basics</option>" +
                     "<option>Making Apps</option>" +
@@ -53,13 +53,13 @@ namespace SkillsTracker.Controllers
         }
 
         [HttpPost("form")]
-        public IActionResult FormSubmit(string date, string python, string puppeteer, string asp)
+        public IActionResult FormSubmit(string date, string python, string puppeteer, string aspNET)
         {
             string html = $"<h1>{date}</h1>" +
                 $"<ol>" +
                 $"<li>Python: {python}</li>" +
                 $"<li>Puppeteer: {puppeteer}</li>" +
-                $"<li>C#, ASP.NET: {asp}";
+                $"<li>C#, ASP.NET: {aspNET}";
 
             return Content(html, "text/html");
         }
